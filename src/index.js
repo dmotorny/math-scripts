@@ -1,5 +1,7 @@
-const btn = document.querySelector('.btn');
-const finResult = document.querySelector('.result');
+/******** Power function *******/
+
+const powButton = document.querySelector('.pow_button');
+const powResult = document.querySelector('.pow_result');
 
 // First variant - recursion
 
@@ -12,7 +14,7 @@ function pow(x, n) {
     }
 }*/
 
-// Second variant - cycle
+// Second variant - cycle (faster)
 
 function pow(x, n) {
     let result = x;
@@ -22,10 +24,41 @@ function pow(x, n) {
     return result;
 }
 
-btn.addEventListener('click', e => {
-    const x = document.querySelector('.first_num').value;
-    const n = document.querySelector('.second_num').value;
-    const result = pow(x, n);
-    finResult.innerHTML = x + '<sup>' + n + '</sup> = ' + result;
+powButton.addEventListener('click', e => {
+    let x = document.querySelector('.pow_1').value;
+    let n = document.querySelector('.pow_2').value;
+    let result = pow(x, n);
+    powResult.innerHTML = x + '<sup>' + n + '</sup> = ' + result;
+});
+
+/********* Arithmetic Progression **********/
+
+const sumButton = document.querySelector('.sum_button');
+const sumResult = document.querySelector('.sum_result');
+const blockItem_2 = document.getElementsByTagName('DIV')[2];
+
+function sum(n) {
+
+    // First variant - recursion 
+
+    let result = 0;
+    if (n == 1) {        
+        return 1;
+    } else {
+        return result += (+n + sum(+n - 1));
+    }
+
+    // Second variant - cycle (faster)
+
+    // for (let i = 1; i < n; i++) {
+    //     result *= x;
+    // }
+    // return result;
+}
+
+sumButton.addEventListener('click', e => {
+    let x = document.querySelector('.sum_1').value;
+    let result = sum(x);
+    sumResult.innerHTML = result;
 });
 

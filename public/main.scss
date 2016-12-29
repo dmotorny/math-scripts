@@ -5,10 +5,12 @@ input, button {
 $block_color: #f7f7f7;
 $bd_radius: 5px;
 
-.pow_block {
+.block {
     background: $block_color;
     padding: 20px 20px;
     border-radius: $bd_radius;
+    max-width: 250px;
+    margin: 0px 0px 10px 0px;
 
     h3 {
         margin: 0px 0px 5px 0px;
@@ -30,12 +32,5 @@ $bd_radius: 5px;
         &:hover {
             cursor: pointer;
         }
-    }
-
-    .result_inner {
-        margin-top: 10px;
-        padding: 5px 5px;
-        border: 1px solid silver;
-        border-radius: $bd_radius;
     }
 }
