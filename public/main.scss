@@ -1,0 +1,41 @@
+input, button {
+    outline: none;
+}
+
+$block_color: #f7f7f7;
+$bd_radius: 5px;
+
+.pow_block {
+    background: $block_color;
+    padding: 20px 20px;
+    border-radius: $bd_radius;
+
+    h2 {
+        margin: 0;
+    }
+
+    input {
+        margin: 4px 0px;
+        padding: 5px 5px;
+        border-radius: $bd_radius;
+        border: 1px solid silver;
+    }
+
+    button {
+        margin: 5px 0px;
+        padding: 5px 5px;
+        border-radius: $bd_radius;
+        border: 1px solid silver;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .result_inner {
+        margin-top: 10px;
+        padding: 5px 5px;
+        border: 1px solid silver;
+        border-radius: $bd_radius;
+    }
+}
