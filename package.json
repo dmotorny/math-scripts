@@ -7,13 +7,17 @@
   "devDependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
     "http-server": "^0.9.0",
+    "node-sass": "^4.1.1",
+    "nodemon": "^1.11.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --inline --hot",
-    "dev": "SET NODE_ENV=development && npm run start"
+    "dev": "SET NODE_ENV=development && npm run start",
+    "build-css": "node-sass --include-path scss public/main.scss public/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "Dmitry Motorny",
   "license": "ISC"

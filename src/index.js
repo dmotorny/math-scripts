@@ -13,6 +13,6 @@ btn.addEventListener('click', e => {
     const x = document.querySelector('.first_num').value;
     const n = document.querySelector('.second_num').value;
     const result = pow(x, n);
-    finResult.innerHTML = x + ' в степени ' + n + ' равно ' + result;
+    finResult.innerHTML = x + '<sup>' + n + '</sup> = ' + result;
 });
 
