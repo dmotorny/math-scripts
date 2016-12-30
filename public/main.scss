@@ -12,6 +12,7 @@ $bd_radius: 5px;
     max-width: 250px;
     margin: 0px 5px 10px 0px;
     display: inline-table;
+    position: relative;
 
     h3 {
         margin: 0px 0px 5px 0px;
@@ -25,14 +26,26 @@ $bd_radius: 5px;
     }
 
     button {
-        margin: 5px 0px 5px 134px;
+        margin: 5px 0px 5px 27px;
         padding: 5px 5px;
-        border-radius: $bd_radius;
+        border-radius: 5px;
         border: 1px solid silver;
 
         &:hover {
             cursor: pointer;
             background: #eaeaea;
         }
+    }
+
+    .sum_time, .pow_time, .fact_time, .fib_time {
+        width: 100px;
+        float: left;
+        font-size: 85%;
+        padding: 10px 0px 0px 7px;
+    }
+
+    .pow_result, .sum_result, .fact_result, .fib_result {
+        text-align: center;
+        margin-top: 5px;
     }
 }
