@@ -21,6 +21,6 @@
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "lint": "eslint ./src"
   },
-  "author": "Dmitry Motorny",
+  "author": "Dmitry Motorny - dmotorny@gmail.com",
   "license": "ISC"
 }
