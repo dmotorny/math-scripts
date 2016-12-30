@@ -95,3 +95,34 @@ factButton.addEventListener('click', e => {
     factResult.innerHTML = x + '! = ' + result;
 });
 
+/********* Fibonacci numbers **********/
+
+const fibButton = document.querySelector('.fib_button');
+const fibResult = document.querySelector('.fib_result');
+
+function fib(n) {
+
+    // First variant - recursion 
+    
+    /*
+    if (n != 1) { 
+        return  n * fact(n - 1);
+    } else {
+        return 1;
+    }*/
+
+    // Second variant - cycle (faster)
+    
+    let result = 1; 
+    for (let i = 1; i <= n; i++) { 
+        result *= i;
+    }
+    return result;
+}
+
+fibButton.addEventListener('click', e => {
+    let x = document.querySelector('.fib_1').value;
+    let result = fib(x);
+    fibResult.innerHTML = result;   
+});
+
