@@ -72,28 +72,26 @@ const factResult = document.querySelector('.fact_result');
 function fact(n) {
 
     // First variant - recursion 
-
+    
     /*
-    let result = 0;
-    if (n == 1) {        
-        return 1;
+    if (n != 1) { 
+        return  n * fact(n - 1);
     } else {
-        return result += (+n + sum(+n - 1));
+        return 1;
     }*/
 
     // Second variant - cycle (faster)
-
-    /*
+    
     let result = 1; 
     for (let i = 1; i <= n; i++) { 
         result *= i;
     }
-    return result;*/
+    return result;
 }
 
 factButton.addEventListener('click', e => {
     let x = document.querySelector('.fact_1').value;
     let result = fact(x);
-    factResult.innerHTML = x + '! = ' +result;
+    factResult.innerHTML = x + '! = ' + result;
 });
 
