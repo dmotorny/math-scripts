@@ -1,3 +1,3 @@
 Simple math scripts from native JavaScript courses
 
-<a href="#">Demo</a>
+<a href="https://dmotorny.github.io/math-scripts/">Demo</a>
