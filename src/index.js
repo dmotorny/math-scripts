@@ -41,24 +41,59 @@ function sum(n) {
 
     // First variant - recursion 
 
+    /*
     let result = 0;
     if (n == 1) {        
         return 1;
     } else {
         return result += (+n + sum(+n - 1));
-    }
+    }*/
 
     // Second variant - cycle (faster)
 
-    // for (let i = 1; i < n; i++) {
-    //     result *= x;
-    // }
-    // return result;
+    let result = 0; 
+    for (let i = 1; i <= n; i++) {  
+        result += i;
+    }
+    return result;
 }
 
 sumButton.addEventListener('click', e => {
     let x = document.querySelector('.sum_1').value;
     let result = sum(x);
     sumResult.innerHTML = result;
+});
+
+/********* Factorial **********/
+
+const factButton = document.querySelector('.fact_button');
+const factResult = document.querySelector('.fact_result');
+
+function fact(n) {
+
+    // First variant - recursion 
+
+    /*
+    let result = 0;
+    if (n == 1) {        
+        return 1;
+    } else {
+        return result += (+n + sum(+n - 1));
+    }*/
+
+    // Second variant - cycle (faster)
+
+    /*
+    let result = 1; 
+    for (let i = 1; i <= n; i++) { 
+        result *= i;
+    }
+    return result;*/
+}
+
+factButton.addEventListener('click', e => {
+    let x = document.querySelector('.fact_1').value;
+    let result = fact(x);
+    factResult.innerHTML = x + '! = ' +result;
 });
 

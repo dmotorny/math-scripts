@@ -10,7 +10,8 @@ $bd_radius: 5px;
     padding: 20px 20px;
     border-radius: $bd_radius;
     max-width: 250px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 5px 10px 0px;
+    display: inline-table;
 
     h3 {
         margin: 0px 0px 5px 0px;
@@ -31,6 +32,7 @@ $bd_radius: 5px;
 
         &:hover {
             cursor: pointer;
+            background: #eaeaea;
         }
     }
 }
