@@ -126,9 +126,7 @@ const fibTime = document.querySelector('.fib_time');
     // Second variant - cycle
 
     function fib(n) {
-        let a, b, c;
-            a = 1;
-            b = 1;
+        let a = 1, b = 1, c;
         for (let i = 0; i < (n - 2); i++) {
             c = a + b;
             a = b;
