@@ -116,23 +116,13 @@ const fibResult = document.querySelector('.fib_result');
 const fibTime = document.querySelector('.fib_time');
 
 function fib(n) {
-
-    // First variant - recursion 
-    
-    /*
-    if (n != 1) { 
-        return  n * fact(n - 1);
-    } else {
-        return 1;
-    }*/
-
-    // Second variant - cycle (faster)
-    
-    let result = 1; 
-    for (let i = 1; i <= n; i++) { 
-        result *= i;
+    let a = 1, b = 1, c;
+    for (let i = 0; i < (n - 2); i++) {
+        c = a + b;
+        a = b;
+        b = c;
     }
-    return result;
+    return c;
 }
 
 fibButton.addEventListener('click', e => {
