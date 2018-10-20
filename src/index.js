@@ -17,6 +17,14 @@ function pow(x, n) {
 
 // Second variant - cycle (faster)
 
+/**
+ * Pow counting
+ *
+ * @function pow
+ * @param x
+ * @param n
+ * @returns result
+ */
 function pow(x, n) {
     let result = x;
     for (let i = 1; i < n; i++) {
